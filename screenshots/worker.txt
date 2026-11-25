@@ -1,0 +1,2 @@
+batch [0..1]: 2 CDC events, keys [101, 102]
+batch [2..9]: 7 CDC events, keys [101, 102, 103]

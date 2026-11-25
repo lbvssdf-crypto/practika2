@@ -1,0 +1,13 @@
+Trino: [['476']]
+PostgreSQL: 17.12 (Debian 17.12-0+deb13u1)
+Replication: [('p2_accounts_slot', 'pgoutput', True)]
+Debezium: {'name': 'p2-accounts', 'connector': {'state': 'RUNNING', 'worker_id': '127.0.0.1:8083'}, 'tasks': [{'id': 0, 'state': 'RUNNING', 'worker_id': '127.0.0.1:8083'}], 'type': 'source'}
+Lakekeeper: [{'id': '01a2139c-0366-76da-bfe1-774a08a00bf0', 'warehouse-id': '01a2139c-0366-76da-bfe1-774a08a00bf0', 'name': 'p2_history', 'project-id': '00000000-0000-0000-0000-000000000000', 'storage-profile': {'type': 's3', 'bucket': 'p2-history', 'key-prefix': 'warehouse', 'assume-role-arn': None, 'endpoint': 'http://127.0.0.1:9005/', 'region': 'us-east-1', 'path-style-access': True, 'sts-role-arn': None, 'sts-endpoint': None, 'sts-enabled': False, 'sts-token-validity-seconds': 3600, 'sts-session-tags': {}, 'sts-session-policy-principal': None, 'flavor': 's3-compat', 'allow-alternative-protocols': None, 'remote-signing-url-style': 'auto', 'push-s3-delete-disabled': True, 'aws-kms-key-arn': None, 'remote-signing-enabled': True, 'legacy-md5-behavior': None, 'storage-layout': None}, 'storage-credential-type': {'type': 's3', 'credential-type': 'access-key'}, 'delete-profile': {'type': 'hard'}, 'status': 'active', 'protected': False, 'managed-by': 'self-managed', 'allowed-format-versions': [1, 2, 3], 'updated-at': None}]
+Iceberg files accounts_cdc
+s3://p2-history/warehouse/accounts_cdc-6726b56e405148e5a8a6c7c33430bf21/data/20261125_164854_00008_rf3wc-7e81163e-1128-4d36-b7d1-307a976302d4.parquet 2
+s3://p2-history/warehouse/accounts_cdc-6726b56e405148e5a8a6c7c33430bf21/data/20261125_164857_00014_rf3wc-fc5ff41e-b794-446b-9ec2-8c734bacc87e.parquet 7
+Iceberg files accounts_scd2
+s3://p2-history/warehouse/accounts_scd2-8bd171db0e0d47ea924e938ef59451b7/data/20261125_164856_00010_rf3wc-85ca0dce-34cc-4f40-8ec9-027ddde38466.parquet 2
+s3://p2-history/warehouse/accounts_scd2-8bd171db0e0d47ea924e938ef59451b7/data/20261125_164858_00015_rf3wc-427849e7-c2a1-4fa2-8001-bdb8b372d4ef.parquet 7
+s3://p2-history/warehouse/accounts_scd2-8bd171db0e0d47ea924e938ef59451b7/data/20261125_164858_00015_rf3wc-7ad51fef-a969-47eb-a40b-84dcde7a5a3e.parquet 2
+Kafka next committed offset: 10

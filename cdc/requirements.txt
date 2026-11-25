@@ -1,0 +1,4 @@
+boto3==1.38.46
+kafka-python==2.2.15
+psycopg[binary]==3.2.9
+trino==0.337.0

@@ -1,0 +1,4 @@
+batch [0..9]: 9 CDC events, keys [101, 102, 103]
+Replay complete through offset 9.
+CDC rows: 9, SCD2 rows: 7.
+Unchanged content checksums: CDC 831561024C2B86CD, SCD2 B4CBACD630152E44.

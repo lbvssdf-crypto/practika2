@@ -1,0 +1,42 @@
+Q1: 7 rows
+account_id	owner_name	city	status	valid_from	valid_to	is_current
+101	Анна Романова	Казань	ACTIVE	2026-02-20 09:00:00	2026-03-03 08:00:00	False
+101	Анна Романова	Самара	ACTIVE	2026-03-03 08:00:00	2026-03-05 10:00:00	False
+101	Павел Соколов	Москва	ACTIVE	2026-03-05 10:00:00	2026-03-07 12:00:00	False
+101	Павел Соколов	Москва	SUSPENDED	2026-03-07 12:00:00	2026-03-09 18:00:00	False
+101	Павел Соколов	Москва	CANCELLED	2026-03-09 18:00:00	NULL	True
+102	Илья Орлов	Омск	ACTIVE	2026-02-25 11:00:00	2026-11-25 16:48:57.347000	False
+103	Мария Белова	Пермь	ACTIVE	2026-03-10 09:00:00	NULL	True
+
+Q2: 1 rows
+account_id	owner_name	city	status
+101	Анна Романова	Казань	ACTIVE
+
+Q3: 1 rows
+account_id	owner_name	status	valid_to
+101	Павел Соколов	SUSPENDED	2026-03-09 18:00:00
+
+Q4: 9 rows
+kafka_partition	kafka_offset	account_id	operation	effective_at	source_lsn
+0	0	101	r	2026-02-20 09:00:00	37015120
+0	1	102	r	2026-02-25 11:00:00	37015120
+0	2	101	u	2026-03-05 10:00:00	37022216
+0	3	101	u	2026-03-07 12:00:00	37022464
+0	4	101	u	2026-03-09 18:00:00	37022720
+0	5	102	d	2026-11-25 16:48:57.347000	37022984
+0	7	101	u	2026-03-03 08:00:00	37023152
+0	8	101	u	2026-03-09 18:00:00	37023360
+0	9	103	c	2026-03-10 09:00:00	37023616
+
+Q5: 3 rows
+account_id	versions	current_versions
+101	5	1
+102	1	0
+103	1	1
+
+Q6: 0 rows
+account_id	current_versions	duplicates
+
+Q7: 0 rows
+account_id	valid_from	valid_to	next_valid_from
+

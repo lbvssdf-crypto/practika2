@@ -1,0 +1,8 @@
+$ docker compose config -q
+OK (exit 0)
+
+$ docker compose up -d --build
+unable to get image 'trinodb/trino:476': permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.51/images/trinodb/trino:476/json": dial unix /var/run/docker.sock: socket: operation not permitted
+
+$ docker ps
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.51/containers/json": dial unix /var/run/docker.sock: socket: operation not permitted
