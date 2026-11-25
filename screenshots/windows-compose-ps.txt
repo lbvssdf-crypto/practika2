@@ -1,0 +1,10 @@
+NAME                  IMAGE                                     COMMAND                  SERVICE      CREATED         STATUS                     PORTS
+p2-cdc-connect-1      quay.io/debezium/connect:3.2.1.Final      "/docker-entrypoint.…"   connect      3 minutes ago   Up 2 minutes               127.0.0.1:8083->8083/tcp
+p2-cdc-kafka-1        apache/kafka:3.9.1                        "/__cacert_entrypoin…"   kafka        3 minutes ago   Up 3 minutes (healthy)     9092/tcp
+p2-cdc-lakekeeper-1   quay.io/lakekeeper/catalog:v0.15.0        "/home/nonroot/lakek…"   lakekeeper   3 minutes ago   Up 2 minutes (healthy)     127.0.0.1:8181->8181/tcp
+p2-cdc-migrate-1      quay.io/lakekeeper/catalog:v0.15.0        "/home/nonroot/lakek…"   migrate      3 minutes ago   Exited (0) 2 minutes ago
+p2-cdc-postgres-1     postgres:17-bookworm                      "docker-entrypoint.s…"   postgres     3 minutes ago   Up 3 minutes (healthy)     127.0.0.1:5542->5432/tcp
+p2-cdc-setup-1        p2-cdc-tools:1                            "python -u /app/app.…"   setup        3 minutes ago   Exited (0) 2 minutes ago
+p2-cdc-silo-1         pgsty/silo:RELEASE.2026-09-03T13-18-01Z   "/usr/bin/docker-ent…"   silo         3 minutes ago   Up 3 minutes (healthy)     127.0.0.1:9001->9001/tcp
+p2-cdc-trino-1        trinodb/trino:476                         "/usr/lib/trino/bin/…"   trino        3 minutes ago   Up 2 minutes (healthy)     127.0.0.1:9999->8080/tcp
+p2-cdc-worker-1       p2-cdc-tools:1                            "python -u /app/app.…"   worker       3 minutes ago   Up 2 minutes

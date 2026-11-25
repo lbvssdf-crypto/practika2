@@ -1,0 +1,8 @@
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS                   PORTS                      NAMES
+a1f722f80448   p2-cdc-tools:1                            "python -u /app/app.…"   34 seconds ago   Up 28 seconds                                       p2-cdc-worker-1
+4c6798476167   trinodb/trino:476                         "/usr/lib/trino/bin/…"   4 minutes ago    Up 4 minutes (healthy)   127.0.0.1:9999->8080/tcp   p2-cdc-trino-1
+a5df55443321   quay.io/lakekeeper/catalog:v0.15.0        "/home/nonroot/lakek…"   4 minutes ago    Up 4 minutes (healthy)   127.0.0.1:8181->8181/tcp   p2-cdc-lakekeeper-1
+3e8eeaf1bee8   quay.io/debezium/connect:3.2.1.Final      "/docker-entrypoint.…"   4 minutes ago    Up 4 minutes             127.0.0.1:8083->8083/tcp   p2-cdc-connect-1
+96a3e5332f35   postgres:17-bookworm                      "docker-entrypoint.s…"   4 minutes ago    Up 4 minutes (healthy)   127.0.0.1:5542->5432/tcp   p2-cdc-postgres-1
+56bc68776914   pgsty/silo:RELEASE.2026-09-03T13-18-01Z   "/usr/bin/docker-ent…"   4 minutes ago    Up 4 minutes (healthy)   127.0.0.1:9001->9001/tcp   p2-cdc-silo-1
+dd40f8c6f5f1   apache/kafka:3.9.1                        "/__cacert_entrypoin…"   4 minutes ago    Up 4 minutes (healthy)   9092/tcp                   p2-cdc-kafka-1
