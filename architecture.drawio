@@ -53,7 +53,7 @@
         <mxCell id="kafka" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;Kafka&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;p2.public.accounts&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;Одна партиция&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#f2edff;strokeColor=#7254b1;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
           <mxGeometry x="632" y="193" width="236" height="102" as="geometry" />
         </mxCell>
-        <mxCell id="worker" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;Python-потребитель&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;До 100 событий за микробатч&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;Подтверждение offset после двух MERGE&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#f2edff;strokeColor=#7254b1;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
+        <mxCell id="worker" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;Python-потребитель&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;До 100 сообщений за микробатч&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;Подтверждение offset после двух MERGE&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#f2edff;strokeColor=#7254b1;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
           <mxGeometry x="1017" y="193" width="367" height="102" as="geometry" />
         </mxCell>
         <mxCell id="db" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;База catalogdb&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;Служебные метаданные&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#eaf2ff;strokeColor=#3a6caa;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
@@ -68,7 +68,7 @@
         <mxCell id="s3" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;Silo / S3&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;Iceberg на Parquet&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;accounts_cdc + accounts_scd2&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#e7f7ee;strokeColor=#287855;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
           <mxGeometry x="1001" y="558" width="383" height="93" as="geometry" />
         </mxCell>
-        <mxCell id="user" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;Бухгалтерия и аналитики&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;Запросы через DBeaver&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#fff3df;strokeColor=#986218;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
+        <mxCell id="user" value="&lt;div style=&quot;font-size:17px&quot;&gt;&lt;b&gt;Бухгалтерия и аналитики&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size:12px&quot;&gt;SQL-запросы к истории&lt;/div&gt;" style="rounded=1;arcSize=11;html=1;whiteSpace=wrap;align=left;spacingLeft=13;fillColor=#fff3df;strokeColor=#986218;fontColor=#152942;strokeWidth=1.5;" vertex="1" parent="1">
           <mxGeometry x="1001" y="715" width="383" height="60" as="geometry" />
         </mxCell>
         <mxCell id="edge0" edge="1" source="pg" target="dbz" parent="1" style="edgeStyle=segmentEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#52677c;strokeWidth=1.7;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.5000;entryDx=0;entryDy=0;">
@@ -117,7 +117,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="label7" value="Чтение и запись Parquet" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#344b64;fillColor=#f8fafc;" vertex="1" parent="1">
-          <mxGeometry x="1180.85" y="526.0" width="172.29999999999998" height="15" as="geometry" />
+          <mxGeometry x="1180.85" y="535.0" width="172.29999999999998" height="15" as="geometry" />
         </mxCell>
         <mxCell id="edge8" edge="1" source="lk" target="s3" parent="1" style="edgeStyle=segmentEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#52677c;strokeWidth=1.7;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.4624;entryDx=0;entryDy=0;">
           <mxGeometry relative="1" as="geometry">
@@ -138,7 +138,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="label9" value="SQL / результат" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#344b64;fillColor=#f8fafc;" vertex="1" parent="1">
-          <mxGeometry x="1307.25" y="682.0" width="115.5" height="15" as="geometry" />
+          <mxGeometry x="1307.25" y="694.0" width="115.5" height="15" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
